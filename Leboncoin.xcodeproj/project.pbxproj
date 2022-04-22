@@ -15,6 +15,7 @@
 		50EFFA9428129ACA0015907E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50EFFA9328129ACA0015907E /* Assets.xcassets */; };
 		50EFFA9728129ACA0015907E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50EFFA9528129ACA0015907E /* LaunchScreen.storyboard */; };
 		50EFFAA22812A1950015907E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EFFAA12812A1950015907E /* DataService.swift */; };
+		50EFFAA42812B9D80015907E /* Annonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EFFAA32812B9D80015907E /* Annonce.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		50EFFA9628129ACA0015907E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50EFFA9828129ACA0015907E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50EFFAA12812A1950015907E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		50EFFAA32812B9D80015907E /* Annonce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annonce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +65,6 @@
 				50EFFAA028129FFE0015907E /* Controller */,
 				50EFFA9F28129FF30015907E /* View */,
 				50EFFA9E28129FEA0015907E /* Model */,
-				50EFFA8D28129AC80015907E /* Main.storyboard */,
 				50EFFA9328129ACA0015907E /* Assets.xcassets */,
 				50EFFA9528129ACA0015907E /* LaunchScreen.storyboard */,
 				50EFFA9828129ACA0015907E /* Info.plist */,
@@ -78,6 +79,7 @@
 				50EFFA8728129AC80015907E /* AppDelegate.swift */,
 				50EFFA8928129AC80015907E /* SceneDelegate.swift */,
 				50EFFAA12812A1950015907E /* DataService.swift */,
+				50EFFAA32812B9D80015907E /* Annonce.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -85,6 +87,7 @@
 		50EFFA9F28129FF30015907E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				50EFFA8D28129AC80015907E /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				50EFFA8828129AC80015907E /* AppDelegate.swift in Sources */,
 				50EFFA8A28129AC80015907E /* SceneDelegate.swift in Sources */,
 				50EFFA9228129AC80015907E /* Leboncoin.xcdatamodeld in Sources */,
+				50EFFAA42812B9D80015907E /* Annonce.swift in Sources */,
 				50EFFAA22812A1950015907E /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
