@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5070CD28281340B200E9D8A1 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070CD27281340B200E9D8A1 /* ItemTableViewCell.swift */; };
+		5070CD2A2814076500E9D8A1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070CD292814076500E9D8A1 /* HomeViewController.swift */; };
+		5070CD2C28140AB000E9D8A1 /* ErrorCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070CD2B28140AB000E9D8A1 /* ErrorCases.swift */; };
 		50EFFA8828129AC80015907E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EFFA8728129AC80015907E /* AppDelegate.swift */; };
 		50EFFA8A28129AC80015907E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EFFA8928129AC80015907E /* SceneDelegate.swift */; };
-		50EFFA8C28129AC80015907E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EFFA8B28129AC80015907E /* ViewController.swift */; };
+		50EFFA8C28129AC80015907E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EFFA8B28129AC80015907E /* ListViewController.swift */; };
 		50EFFA8F28129AC80015907E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50EFFA8D28129AC80015907E /* Main.storyboard */; };
 		50EFFA9228129AC80015907E /* Leboncoin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50EFFA9028129AC80015907E /* Leboncoin.xcdatamodeld */; };
 		50EFFA9428129ACA0015907E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50EFFA9328129ACA0015907E /* Assets.xcassets */; };
@@ -19,10 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5070CD27281340B200E9D8A1 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		5070CD292814076500E9D8A1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5070CD2B28140AB000E9D8A1 /* ErrorCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCases.swift; sourceTree = "<group>"; };
 		50EFFA8428129AC80015907E /* Leboncoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Leboncoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50EFFA8728129AC80015907E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50EFFA8928129AC80015907E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		50EFFA8B28129AC80015907E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50EFFA8B28129AC80015907E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		50EFFA8E28129AC80015907E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50EFFA9128129AC80015907E /* Leboncoin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Leboncoin.xcdatamodel; sourceTree = "<group>"; };
 		50EFFA9328129ACA0015907E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +86,7 @@
 				50EFFA8928129AC80015907E /* SceneDelegate.swift */,
 				50EFFAA12812A1950015907E /* DataService.swift */,
 				50EFFAA32812B9D80015907E /* Annonce.swift */,
+				5070CD2B28140AB000E9D8A1 /* ErrorCases.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -88,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				50EFFA8D28129AC80015907E /* Main.storyboard */,
+				5070CD27281340B200E9D8A1 /* ItemTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -95,7 +103,8 @@
 		50EFFAA028129FFE0015907E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				50EFFA8B28129AC80015907E /* ViewController.swift */,
+				50EFFA8B28129AC80015907E /* ListViewController.swift */,
+				5070CD292814076500E9D8A1 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,11 +180,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50EFFA8C28129AC80015907E /* ViewController.swift in Sources */,
+				50EFFA8C28129AC80015907E /* ListViewController.swift in Sources */,
 				50EFFA8828129AC80015907E /* AppDelegate.swift in Sources */,
 				50EFFA8A28129AC80015907E /* SceneDelegate.swift in Sources */,
+				5070CD2A2814076500E9D8A1 /* HomeViewController.swift in Sources */,
+				5070CD2C28140AB000E9D8A1 /* ErrorCases.swift in Sources */,
 				50EFFA9228129AC80015907E /* Leboncoin.xcdatamodeld in Sources */,
 				50EFFAA42812B9D80015907E /* Annonce.swift in Sources */,
+				5070CD28281340B200E9D8A1 /* ItemTableViewCell.swift in Sources */,
 				50EFFAA22812A1950015907E /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

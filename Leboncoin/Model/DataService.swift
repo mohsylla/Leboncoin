@@ -7,8 +7,13 @@
 
 import Foundation
 class DataService {
+    static let shared = DataService()
+    private init(){}
     
-    func getAnnonce(){
+    private var task: URLSessionDataTask?
+    private var session = URLSession(configuration: .default)
+    
+    func getAnnonce(callback: @escaping (Result<[Annonce]?,ErrorCases>)->Void){
         guard let url = URL(string: "https://raw.githubusercontent.com/leboncoin/paperclip/master/listing.json") else{
             return
         }
@@ -16,20 +21,22 @@ class DataService {
         
         var request = URLRequest(url: url)
 
-        let task = URLSession.shared.dataTask(with: request) { data, _ , error in
-            guard let data = data, error == nil else {
-                return print("error data")
+        task = session.dataTask(with: request) { data, _ , error in
+            DispatchQueue.main.async {
+                
+                guard let data = data, error == nil else {
+                                return callback(.failure(.errorNetwork))
+                            }
+                            
+                            guard let responseJson = try? JSONDecoder().decode([Annonce].self, from: data) else{
+                                return callback(.failure(.errorJson))
+                            }
+                            callback(.success(responseJson))
             }
             
-            do{
-                let responseJson = try JSONDecoder().decode([Annonce].self, from: data)
-                print("succcess: \(responseJson)")
-            }
-            catch{
-                  print(error)
-            }
+            
         }
-        task.resume()
+        task?.resume()
        
     }
 }
