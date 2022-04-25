@@ -31,7 +31,7 @@ class DataService {
                             guard let responseJson = try? JSONDecoder().decode([Annonce].self, from: data) else{
                                 return callback(.failure(.errorJson))
                             }
-                            callback(.success(responseJson))
+                callback(.success(responseJson))
             }
             
             

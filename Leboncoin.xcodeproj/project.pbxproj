@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5070CD28281340B200E9D8A1 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070CD27281340B200E9D8A1 /* ItemTableViewCell.swift */; };
 		5070CD2A2814076500E9D8A1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070CD292814076500E9D8A1 /* HomeViewController.swift */; };
 		5070CD2C28140AB000E9D8A1 /* ErrorCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070CD2B28140AB000E9D8A1 /* ErrorCases.swift */; };
+		5070CD532816239E00E9D8A1 /* AnnonceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070CD522816239E00E9D8A1 /* AnnonceCollectionViewCell.swift */; };
 		50EFFA8828129AC80015907E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EFFA8728129AC80015907E /* AppDelegate.swift */; };
 		50EFFA8A28129AC80015907E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EFFA8928129AC80015907E /* SceneDelegate.swift */; };
 		50EFFA8C28129AC80015907E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EFFA8B28129AC80015907E /* ListViewController.swift */; };
@@ -22,9 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5070CD27281340B200E9D8A1 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		5070CD292814076500E9D8A1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5070CD2B28140AB000E9D8A1 /* ErrorCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCases.swift; sourceTree = "<group>"; };
+		5070CD522816239E00E9D8A1 /* AnnonceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnonceCollectionViewCell.swift; sourceTree = "<group>"; };
 		50EFFA8428129AC80015907E /* Leboncoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Leboncoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50EFFA8728129AC80015907E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50EFFA8928129AC80015907E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				50EFFA8D28129AC80015907E /* Main.storyboard */,
-				5070CD27281340B200E9D8A1 /* ItemTableViewCell.swift */,
+				5070CD522816239E00E9D8A1 /* AnnonceCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,8 +186,8 @@
 				5070CD2A2814076500E9D8A1 /* HomeViewController.swift in Sources */,
 				5070CD2C28140AB000E9D8A1 /* ErrorCases.swift in Sources */,
 				50EFFA9228129AC80015907E /* Leboncoin.xcdatamodeld in Sources */,
+				5070CD532816239E00E9D8A1 /* AnnonceCollectionViewCell.swift in Sources */,
 				50EFFAA42812B9D80015907E /* Annonce.swift in Sources */,
-				5070CD28281340B200E9D8A1 /* ItemTableViewCell.swift in Sources */,
 				50EFFAA22812A1950015907E /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
