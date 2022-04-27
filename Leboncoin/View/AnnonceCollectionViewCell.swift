@@ -7,6 +7,22 @@
 
 import UIKit
 
+class NewsTableViewCellViewModel{
+    //image titr categorie prix
+    let images_url: URL?
+    let imageData: Data? = nil
+    let category_id: Int
+    let title: String
+    let price: Float
+    
+    init(image_url: URL?,category_id:Int,title:String,price:Float) {
+        self.images_url = image_url
+        self.category_id = category_id
+        self.title = title
+        self.price = price
+    }
+}
+
 class AnnonceCollectionViewCell: UICollectionViewCell {
     static let identifier = "AnnonceCollectionViewCell"
     
@@ -14,7 +30,7 @@ class AnnonceCollectionViewCell: UICollectionViewCell {
         let imageView =  UIImageView()
         imageView.backgroundColor = .yellow
         imageView.image = UIImage(systemName: "house")
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         return imageView
     }()
@@ -35,12 +51,21 @@ class AnnonceCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
+    private let myLabel3: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .cyan
+        label.textAlignment = .center
+        label.text = "Custom3"
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = .systemRed
+        contentView.backgroundColor = .white
         contentView.addSubview(myLabel)
         contentView.addSubview(myImageView)
         contentView.addSubview(myLabel2)
+        contentView.addSubview(myLabel3)
         contentView.clipsToBounds = true
     }
     
@@ -50,20 +75,28 @@ class AnnonceCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        myLabel.frame = CGRect(x: 5, y: contentView.frame.size.height-50, width: contentView.frame.size.width-10, height: 50)
+        myLabel.frame = CGRect(x: 5, y: contentView.frame.size.height-60, width: contentView.frame.size.width-10, height: 20)
+        myLabel2.frame = CGRect(x: 5, y: contentView.frame.size.height-40, width: contentView.frame.size.width-10, height: 20)
+        myLabel3.frame = CGRect(x: 5, y: contentView.frame.size.height-20, width: contentView.frame.size.width-10, height: 20)
         
-        myImageView.frame = CGRect(x: 5, y: contentView.frame.size.height-50, width: contentView.frame.size.width-10, height: -50)
-        
-        myLabel2.frame = CGRect(x: 5, y: contentView.frame.size.height-50, width: contentView.frame.size.width-10, height: 20)
+        myImageView.frame = CGRect(x: 5, y: contentView.frame.size.height-70, width: contentView.frame.size.width-10, height: -100)
         
         
         
     }
     
-    public func configure(label: String, image: String, label2: String) {
+    public func configure(label: String, label2: String, label3: Float, image: String) {
+        
+        guard let url = URL(string: image) else {return}
+        DispatchQueue.global().async {
+            guard let data = try? Data(contentsOf: url) else{return}
+            DispatchQueue.main.async {
+                self.myImageView.image = UIImage(data: data)
+            }
+        }
         myLabel.text = label
         myLabel2.text = label2
-        myImageView.image = UIImage(systemName: image)
+        myLabel3.text = String(label3)
     }
     
     override func prepareForReuse() {
